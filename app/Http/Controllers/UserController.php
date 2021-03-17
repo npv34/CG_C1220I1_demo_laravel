@@ -2,28 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Services\UserService;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
+    protected UserService $userService;
+
+    public function __construct(UserService $userService)
+    {
+        $this->userService = $userService;
+    }
+
     function index() {
-        $users = [
-            "1" => [
-                "name" => "Dao",
-                "email" => "Dao@gmail.com",
-                "address" => "Hn"
-            ],
-            "2" => [
-                "name" => "Tuan",
-                "email" => "tuan@gmail.com",
-                "address" => "Hn"
-            ],
-            "3" => [
-                "name" => "Minh",
-                "email" => "minh@gmail.com",
-                "address" => "Hn"
-            ]
-        ];
+        $users = $this->userService->getAll();
         return view('admin.users.list', compact('users'));
     }
 

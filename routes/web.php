@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -25,3 +26,6 @@ Route::prefix('admin')->group(function () {
         Route::get('/{id}/edit', [UserController::class, 'edit'])->name('users.edit');
     });
 });
+
+Route::get('register', [AuthController::class, 'showFormRegister'])->name('auth.showFormRegister');
+Route::post('register', [AuthController::class, 'register'])->name('auth.register')->middleware('checkAge');

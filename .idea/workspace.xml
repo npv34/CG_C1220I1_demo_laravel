@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="be3625b6-8fea-4b87-bd30-97fc751d9138" name="Default Changelist" comment="" />
+    <list default="true" id="be3625b6-8fea-4b87-bd30-97fc751d9138" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Repositories/Repository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Repositories/UserRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Services/UserService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,6 +20,9 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -122,6 +135,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1pmelgS4npDAIklxQm5mte1THtm" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -132,7 +146,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -151,7 +165,8 @@
       <updated>1615792848399</updated>
       <workItem from="1615792852152" duration="1669000" />
       <workItem from="1615878069884" duration="29000" />
-      <workItem from="1615878117651" duration="2340000" />
+      <workItem from="1615878117651" duration="3275000" />
+      <workItem from="1615964880895" duration="2327000" />
     </task>
     <servers />
   </component>
