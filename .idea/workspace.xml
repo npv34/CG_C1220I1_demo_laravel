@@ -2,14 +2,99 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be3625b6-8fea-4b87-bd30-97fc751d9138" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Repositories/Repository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Repositories/UserRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Services/UserService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/register.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/backend/css/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/backend/js/scripts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/core/footer.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/core/left-sidebar.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/.browserslistrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/.travis.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/dist/401.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/dist/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/dist/500.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/dist/assets/demo/chart-area-demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/dist/assets/demo/chart-bar-demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/dist/assets/demo/chart-pie-demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/dist/assets/demo/datatables-demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/dist/assets/img/error-404-monochrome.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/dist/charts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/dist/css/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/dist/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/dist/js/scripts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/dist/layout-sidenav-light.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/dist/layout-static.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/dist/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/dist/password.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/dist/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/dist/tables.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/scripts/build-assets.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/scripts/build-pug.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/scripts/build-scripts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/scripts/build-scss.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/scripts/clean.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/scripts/render-assets.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/scripts/render-pug.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/scripts/render-scripts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/scripts/render-scss.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/scripts/sb-watch.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/scripts/start-debug.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/scripts/start.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/src/assets/demo/chart-area-demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/src/assets/demo/chart-bar-demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/src/assets/demo/chart-pie-demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/src/assets/demo/datatables-demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/src/assets/img/error-404-monochrome.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/src/js/scripts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/src/pug/layouts/authentication.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/src/pug/layouts/dashboard.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/src/pug/layouts/error.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/src/pug/layouts/includes/footer.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/src/pug/layouts/includes/head/css.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/src/pug/layouts/includes/head/icons.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/src/pug/layouts/includes/head/meta.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/src/pug/layouts/includes/head/title.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/src/pug/layouts/includes/navigation/sidenav.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/src/pug/layouts/includes/navigation/topnav.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/src/pug/layouts/includes/scripts.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/src/pug/pages/401.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/src/pug/pages/404.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/src/pug/pages/500.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/src/pug/pages/charts.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/src/pug/pages/includes/datatable.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/src/pug/pages/includes/page-header.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/src/pug/pages/index.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/src/pug/pages/layout-sidenav-light.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/src/pug/pages/layout-static.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/src/pug/pages/login.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/src/pug/pages/password.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/src/pug/pages/register.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/src/pug/pages/tables.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/src/scss/_global.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/src/scss/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/src/scss/layout/_authentication.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/src/scss/layout/_dashboard-default.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/src/scss/layout/_dashboard-fixed.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/src/scss/layout/_error.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/src/scss/navigation/_nav.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/src/scss/navigation/_topnav.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/src/scss/navigation/sidenav/_sidenav-dark.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/src/scss/navigation/sidenav/_sidenav-light.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/src/scss/navigation/sidenav/_sidenav.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/src/scss/styles.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/src/scss/variables/_navigation.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startbootstrap/src/scss/variables/_spacing.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/core/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/core/navbar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -144,10 +229,22 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/backend" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/backend" />
+      <recent name="$PROJECT_DIR$/resources/css" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/backend/css" />
+      <recent name="$PROJECT_DIR$/public/backend" />
+      <recent name="$PROJECT_DIR$/public" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -166,7 +263,8 @@
       <workItem from="1615792852152" duration="1669000" />
       <workItem from="1615878069884" duration="29000" />
       <workItem from="1615878117651" duration="3275000" />
-      <workItem from="1615964880895" duration="2327000" />
+      <workItem from="1615964880895" duration="2707000" />
+      <workItem from="1616049865531" duration="2450000" />
     </task>
     <servers />
   </component>

@@ -15,7 +15,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('', function (){
+   return view('admin.dashboard');
+});
 
 Route::prefix('admin')->group(function () {
     Route::get('/', [HomeController::class, 'index']);
