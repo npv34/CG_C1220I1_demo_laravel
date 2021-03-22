@@ -21,6 +21,7 @@
                         <th>Name</th>
                         <th>Email</th>
                         <th>Role</th>
+                        <th>Group</th>
                         <th></th>
                     </tr>
                     </thead>
@@ -30,6 +31,7 @@
                         <th>Name</th>
                         <th>Email</th>
                         <th>Role</th>
+                        <th>Group</th>
                         <th></th>
                     </tr>
                     </tfoot>
@@ -39,9 +41,16 @@
                             <td>{{ $key + 1 }}</td>
                             <td>{{ $user->name }}</td>
                             <td>{{ $user->email }}</td>
-                            <td>{{ ($user->role == 1) ? 'Admin' : 'User' }}</td>
                             <td>
-                                <a onclick="return confirm('Are you sure delete user: {{ $user->name }}')" class="btn btn-danger" href="{{ route('users.delete', $user->id) }}">Delete</a>
+                                @foreach($user->roles as $role)
+                                    {{ $role->name. ',' }}
+                                @endforeach
+                            </td>
+                            <td><a href="">{{  $user->group->name ?? '' }}</a></td>
+                            <td>
+                                <a onclick="return confirm('Are you sure delete user: {{ $user->name }}')"
+                                   class="btn btn-danger" href="{{ route('users.delete', $user->id) }}">Delete</a>
+                                <a class="btn btn-primary" href="{{ route('users.edit', $user->id) }}">Edit</a>
                             </td>
                         </tr>
                     @endforeach

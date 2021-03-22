@@ -28,10 +28,10 @@ class UserService
 
     function store($request) {
         $user = new User();
-        $user->name = $request->name;
-        $user->email = $request->email;
-        $user->role = $request->role;
+        $user->fill($request->all());
         $user->password = Hash::make($request->password);
-        $this->userRepo->store($user);
+      //  $user->group_id = $request->group_id;
+        $roles = $request->role_id;
+        $this->userRepo->store($user, $roles);
     }
 }

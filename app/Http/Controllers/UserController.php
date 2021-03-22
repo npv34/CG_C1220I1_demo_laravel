@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Http\Services\UserService;
+use App\Models\Group;
+use App\Models\Role;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -22,7 +24,9 @@ class UserController extends Controller
     }
 
     function create() {
-        return view('admin.users.add');
+        $groups = Group::all();
+        $roles = Role::all();
+        return view('admin.users.add', compact('groups', 'roles'));
     }
 
     function store(Request $request) {
@@ -33,7 +37,9 @@ class UserController extends Controller
     }
 
     function edit($id) {
-        dd($id);
+        $groups = Group::all();
+        $user = $this->userService->getById($id);
+        return view('admin.users.edit', compact('groups','user'));
     }
 
     function delete($id) {
