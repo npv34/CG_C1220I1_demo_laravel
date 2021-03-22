@@ -22,15 +22,23 @@
                 @csrf
                 <div class="form-group">
                     <label>Name</label>
-                    <input type="text" class="form-control">
+                    <input type="text" name="name" class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" >
+                    <input type="email" name="email" class="form-control" >
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control">
+                    <input type="password" name="password" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Role</label>
+                    <select class="custom-select" name="role" id="inputGroupSelect01">
+                        <option selected>Choose...</option>
+                        <option value="1">Admin</option>
+                        <option value="2">User</option>
+                    </select>
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>

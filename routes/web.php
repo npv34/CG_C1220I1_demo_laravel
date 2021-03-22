@@ -26,6 +26,7 @@ Route::prefix('admin')->group(function () {
         Route::get('/create', [UserController::class, 'create'])->name('users.create');
         Route::post('/create', [UserController::class, 'store'])->name('users.store');
         Route::get('/{id}/edit', [UserController::class, 'edit'])->name('users.edit');
+        Route::get('/{id}/delete', [UserController::class, 'delete'])->name('users.delete');
     });
 });
 
