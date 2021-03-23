@@ -14,7 +14,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        View::share(['message'=>'xin chao cac ban']);
     }
 
     /**

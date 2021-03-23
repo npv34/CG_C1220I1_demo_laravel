@@ -17,7 +17,7 @@ class UserService
         $this->userRepo = $userRepository;
     }
 
-    function getAll(): \Illuminate\Database\Eloquent\Collection|array
+    function getAll()
     {
         return $this->userRepo->getAll();
     }
@@ -30,7 +30,12 @@ class UserService
         $user = new User();
         $user->fill($request->all());
         $user->password = Hash::make($request->password);
-      //  $user->group_id = $request->group_id;
+        $roles = $request->role_id;
+        $this->userRepo->store($user, $roles);
+    }
+
+    function update($user, $request) {
+        $user->fill($request->all());
         $roles = $request->role_id;
         $this->userRepo->store($user, $roles);
     }

@@ -9,9 +9,9 @@ use Illuminate\Support\Facades\DB;
 
 class UserRepository extends Repository
 {
-    function getAll(): \Illuminate\Database\Eloquent\Collection|array
+    function getAll()
     {
-        return User::all();
+        return User::orderBy('id','DESC')->paginate(3);
     }
 
     function findById($id)

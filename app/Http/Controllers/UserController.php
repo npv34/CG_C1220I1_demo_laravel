@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CreateUserRequest;
 use App\Http\Services\UserService;
 use App\Models\Group;
 use App\Models\Role;
@@ -29,9 +30,11 @@ class UserController extends Controller
         return view('admin.users.add', compact('groups', 'roles'));
     }
 
-    function store(Request $request) {
+    function store(CreateUserRequest $request) {
         // them csdl
         $this->userService->store($request);
+        toastr()->success('Have fun storming the castle!', 'Miracle Max Says');
+
         // quay tro lai tranh d/s user
         return redirect()->route('users.index');
     }
@@ -39,10 +42,20 @@ class UserController extends Controller
     function edit($id) {
         $groups = Group::all();
         $user = $this->userService->getById($id);
-        return view('admin.users.edit', compact('groups','user'));
+        $roles = Role::all();
+        return view('admin.users.edit', compact('groups',
+                                'user', 'roles'));
     }
 
-    function delete($id) {
+    function update($id, Request $request): \Illuminate\Http\RedirectResponse
+    {
+        $user = $this->userService->getById($id);
+        $this->userService->update($user, $request);
+        return redirect()->route('users.index');
+    }
+
+    function delete($id): \Illuminate\Http\RedirectResponse
+    {
         $user = $this->userService->getById($id);
         $user->delete();
         return redirect()->route('users.index');
