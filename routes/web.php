@@ -16,11 +16,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('', function (){
-   return view('admin.dashboard');
+   return redirect()->route('home');
 });
 
 Route::prefix('admin')->group(function () {
-    Route::get('/', [HomeController::class, 'index']);
+    Route::get('/', [HomeController::class, 'index'])->name('home');
     Route::prefix('users')->group(function () {
         Route::get('/', [UserController::class, 'index'])->name('users.index');
         Route::get('/create', [UserController::class, 'create'])->name('users.create');
@@ -30,6 +30,9 @@ Route::prefix('admin')->group(function () {
         Route::get('/{id}/delete', [UserController::class, 'delete'])->name('users.delete');
     });
 });
+
+Route::get('login',[AuthController::class,'showFormLogin'])->name('login');
+Route::post('login',[AuthController::class,'login'])->name('auth.login');
 
 Route::get('register', [AuthController::class, 'showFormRegister'])->name('auth.showFormRegister');
 Route::post('register', [AuthController::class, 'register'])->name('auth.register')->middleware('checkAge');

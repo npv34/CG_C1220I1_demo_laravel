@@ -10,15 +10,29 @@
             Featured
         </div>
         <div class="card-body">
-            <form method="post" action="{{ route('users.store') }}">
+            <form method="post" action="{{ route('users.store') }}" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
                     <label>Name</label>
-                    <input type="text" name="name" class="form-control  @error('name') border-danger  @enderror">
+                    <input value="{{old('name')}}" type="text" name="name" class="form-control  @error('name') border-danger  @enderror">
                     @error('name')
                         <p class="text-danger">{{ $message }}</p>
                     @enderror
                 </div>
+                <div class="form-group">
+                    <label>Image</label>
+                    <div class="row" id="avatar-user">
+                        <input type="file" name="image[]" class="form-control col-md-6  @error('image') border-danger  @enderror">
+                        <button type="button" id="add-file-avatar" onclick="addInputFile()" class="btn btn-success ml-2">+</button>
+                    </div>
+                    <div id="list-input">
+
+                    </div>
+                    @error('image')
+                    <p class="text-danger">{{ $message }}</p>
+                    @enderror
+                </div>
+
                 <div class="form-group">
                     <label>Group</label>
                     <select class="custom-select" name="group_id">

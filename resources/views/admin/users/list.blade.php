@@ -19,6 +19,8 @@
                     <tr>
                         <th>STT</th>
                         <th>Name</th>
+                        <th>Image</th>
+
                         <th>Email</th>
                         <th>Role</th>
                         <th>Group</th>
@@ -29,6 +31,7 @@
                     <tr>
                         <th>STT</th>
                         <th>Name</th>
+                        <th>Image</th>
                         <th>Email</th>
                         <th>Role</th>
                         <th>Group</th>
@@ -40,6 +43,7 @@
                         <tr>
                             <td>{{ $key + 1 }}</td>
                             <td>{{ $user->name }}</td>
+                            <td><img src="{{ asset('storage/' . $user->image) }}" width="150" alt=""></td>
                             <td>{{ $user->email }}</td>
                             <td>
                                 @foreach($user->roles as $role)

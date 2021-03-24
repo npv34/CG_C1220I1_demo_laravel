@@ -8,6 +8,8 @@ use App\Models\Group;
 use App\Models\Role;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
@@ -56,9 +58,17 @@ class UserController extends Controller
 
     function delete($id): \Illuminate\Http\RedirectResponse
     {
-        $user = $this->userService->getById($id);
-        $user->delete();
+        DB::beginTransaction();
+        try {
+            $user = $this->userService->getById($id);
+            Storage::disk('public')->delete($user->image);
+            $user->roles()->detach();
+            $user->delete();
+            DB::commit();
+        } catch (\Exception $exception) {
+            DB::rollBack();
+            toastr()->error('chung nang bi loi. Lien he vs admin!', 'Loi he thong');
+        }
         return redirect()->route('users.index');
-
     }
 }
