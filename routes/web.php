@@ -15,9 +15,11 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('', function (){
-   return redirect()->route('home');
-});
+Route::get('', [\App\Http\Controllers\frontend\HomeController::class,'index']);
+
+Route::get('cart/{id}/add-to-cart', [\App\Http\Controllers\CartController::class, 'addToCart'])->name('cart.addToCart');
+Route::get('cart', [\App\Http\Controllers\CartController::class, 'index'])->name('cart.index');
+Route::get('cart/{id}/remove-product', [\App\Http\Controllers\CartController::class, 'removeProduct'])->name('cart.removeProduct');
 
 Route::prefix('admin')->group(function () {
     Route::get('/', [HomeController::class, 'index'])->name('home');
