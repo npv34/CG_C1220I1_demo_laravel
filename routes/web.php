@@ -20,6 +20,8 @@ Route::get('', [\App\Http\Controllers\frontend\HomeController::class,'index']);
 Route::get('cart/{id}/add-to-cart', [\App\Http\Controllers\CartController::class, 'addToCart'])->name('cart.addToCart');
 Route::get('cart', [\App\Http\Controllers\CartController::class, 'index'])->name('cart.index');
 Route::get('cart/{id}/remove-product', [\App\Http\Controllers\CartController::class, 'removeProduct'])->name('cart.removeProduct');
+Route::post('cart/update',[\App\Http\Controllers\CartController::class, 'updateCart'])->name('cart.update');
+Route::get('cart/delete',[\App\Http\Controllers\CartController::class,'deleteCart'])->name('cart.delete');
 
 Route::prefix('admin')->group(function () {
     Route::get('/', [HomeController::class, 'index'])->name('home');

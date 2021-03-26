@@ -14,7 +14,7 @@ class Cart
 
     public function __construct($oldCart)
     {
-        if ($oldCart){
+        if ($oldCart) {
             $this->items = $oldCart->items;
             $this->totalPrice = $oldCart->totalPrice;
             $this->totalQty = $oldCart->totalQty;
@@ -43,10 +43,33 @@ class Cart
 
     }
 
-    function deleteProduct($id) {
-        $storeProductDelete = $this->items[$id];
-        $this->totalQty -= $storeProductDelete['totalQty'];
-        $this->totalPrice -= $storeProductDelete['totalPrice'];
-        unset($this->items[$id]);
+    function deleteProduct($id)
+    {
+        if (key_exists($id, $this->items)) {
+            $storeProductDelete = $this->items[$id];
+            $this->totalQty -= $storeProductDelete['totalQty'];
+            $this->totalPrice -= $storeProductDelete['totalPrice'];
+            unset($this->items[$id]);
+        }
+    }
+
+    function updateCart($id, $newQuantity)
+    {
+        if (key_exists($id, $this->items)) {
+            $storeProductUpdate = $this->items[$id];
+            $currentTotalQty = $storeProductUpdate['totalQty'];
+            $this->totalQty -= $currentTotalQty;
+            $this->totalQty += $newQuantity;
+
+            $this->totalPrice -= $storeProductUpdate['totalPrice'];
+
+            $storeProductUpdate['totalQty'] = $newQuantity;
+            $storeProductUpdate['totalPrice'] = $newQuantity * $storeProductUpdate['product']->price;
+
+            $this->totalPrice += $storeProductUpdate['totalPrice'];
+
+            $this->items[$id] = $storeProductUpdate;
+
+        }
     }
 }

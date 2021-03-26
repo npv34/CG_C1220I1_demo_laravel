@@ -32,4 +32,23 @@ class CartController extends Controller
         session()->put('cart', $newCart);
         return back();
     }
+
+    function updateCart(Request $request): \Illuminate\Http\RedirectResponse
+    {
+
+        foreach ($request->quantity_product as $key => $value) {
+            $oldCart = session()->get('cart');
+            $newCart = new Cart($oldCart);
+            $newCart->updateCart($key, $value);
+            session()->put('cart', $newCart);
+        }
+
+        return back();
+    }
+
+    function deleteCart(): \Illuminate\Routing\Redirector|\Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse
+    {
+        session()->forget('cart');
+        return redirect('/');
+    }
 }
