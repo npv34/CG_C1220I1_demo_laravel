@@ -32,6 +32,7 @@
             <h4>TotalMoney Cart: {{ number_format($cart->totalPrice, 0, '.','.') }}</h4>
             <button class="btn btn-primary" type="submit">Update Cart</button>
             <a href="{{ route('cart.delete') }}" class="btn btn-danger">Delete Cart</a>
+            <a href="{{ route('cart.checkout') }}" class="btn btn-success">Checkout</a>
         </div>
     </form>
 @endsection

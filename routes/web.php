@@ -23,6 +23,9 @@ Route::get('cart/{id}/remove-product', [\App\Http\Controllers\CartController::cl
 Route::post('cart/update',[\App\Http\Controllers\CartController::class, 'updateCart'])->name('cart.update');
 Route::get('cart/delete',[\App\Http\Controllers\CartController::class,'deleteCart'])->name('cart.delete');
 
+Route::get('check-out',[\App\Http\Controllers\CartController::class,'showFormCheckOut'])->name('cart.checkout');
+Route::post('check-out',[\App\Http\Controllers\CartController::class,'checkOut'])->name('cart.submit_checkout');
+
 Route::prefix('admin')->group(function () {
     Route::get('/', [HomeController::class, 'index'])->name('home');
     Route::prefix('users')->group(function () {
