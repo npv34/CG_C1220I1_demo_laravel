@@ -100,4 +100,10 @@ class CartController extends Controller
         }
 
     }
+
+    function updateProduct(Request $request) {
+        $idProduct = $request->idProduct;
+
+        return response()->json(1);
+    }
 }

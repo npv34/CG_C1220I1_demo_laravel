@@ -25,6 +25,7 @@ Route::get('cart/delete',[\App\Http\Controllers\CartController::class,'deleteCar
 
 Route::get('check-out',[\App\Http\Controllers\CartController::class,'showFormCheckOut'])->name('cart.checkout');
 Route::post('check-out',[\App\Http\Controllers\CartController::class,'checkOut'])->name('cart.submit_checkout');
+Route::post('cart/update-cart',[\App\Http\Controllers\CartController::class,'updateProduct']);
 
 Route::prefix('admin')->group(function () {
     Route::get('/', [HomeController::class, 'index'])->name('home');

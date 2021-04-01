@@ -40,7 +40,7 @@
                     </tfoot>
                     <tbody>
                     @foreach($users as $key => $user)
-                        <tr>
+                        <tr class="user-list">
                             <td>{{ $key + 1 }}</td>
                             <td>{{ $user->name }}</td>
                             <td><img src="{{ asset('storage/' . $user->image) }}" width="150" alt=""></td>

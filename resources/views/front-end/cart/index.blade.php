@@ -21,7 +21,7 @@
                     <th scope="row">{{ $key }}</th>
                     <td>{{ $item['product']->desc }}</td>
                     <td>{{ $item['product']->price }}</td>
-                    <td><input name="quantity_product[{{$key}}]" type="number" value="{{ $item['totalQty'] }}"></td>
+                    <td><input name="quantity_product[{{$key}}]" data-id="{{$key}}" type="number" class="quantity_product" value="{{ $item['totalQty'] }}"></td>
                     <td>{{ $item['totalPrice'] }}</td>
                     <td><a href="{{ route('cart.removeProduct', $key) }}">Delete</a></td>
                 </tr>
