@@ -37,7 +37,14 @@ Route::prefix('admin')->group(function () {
         Route::post('/{id}/edit', [UserController::class, 'update'])->name('users.update');
         Route::get('/{id}/delete', [UserController::class, 'delete'])->name('users.delete');
     });
+
+    Route::prefix('groups')->group(function (){
+        Route::get('create', function (){
+            return 'Thêm mới group';
+        });
+    });
 });
+
 
 Route::get('login',[AuthController::class,'showFormLogin'])->name('login');
 Route::post('login',[AuthController::class,'login'])->name('auth.login');

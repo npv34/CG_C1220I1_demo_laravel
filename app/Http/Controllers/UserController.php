@@ -34,6 +34,7 @@ class UserController extends Controller
 
     function store(CreateUserRequest $request) {
         // them csdl
+       // dd($request);
         $this->userService->store($request);
         toastr()->success('Have fun storming the castle!', 'Miracle Max Says');
 
